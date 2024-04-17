@@ -31,7 +31,7 @@ export const getEmailComponent = async (
                 ".js": "jsx",
             },
             outdir: "stdout", // just a stub for esbuild, it won't actually write to this folder
-            sourcemap: "external",
+            // sourcemap: "external",
         });
         outputFiles = buildData.outputFiles;
     } catch (exception) {
@@ -42,7 +42,6 @@ export const getEmailComponent = async (
                 stack: buildFailure.stack,
                 name: buildFailure.name,
                 cause: buildFailure.cause,
-                data: buildData,
             },
         };
     }
