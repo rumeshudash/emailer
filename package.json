@@ -1,24 +1,32 @@
 {
-  "name": "emailer",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.1"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.1"
-  }
+    "name": "emailer",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "email:dev": "email dev -p 3001",
+        "email:build": "email build",
+        "email:start": "email start"
+    },
+    "dependencies": {
+        "@react-email/components": "0.0.16",
+        "@react-email/render": "^0.0.12",
+        "esbuild": "0.20.2",
+        "next": "14.2.1",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-email": "2.1.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "eslint": "^8",
+        "eslint-config-next": "14.2.1",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5"
+    }
 }
