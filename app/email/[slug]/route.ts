@@ -1,5 +1,6 @@
 import { renderEmailByPath } from "../../../utils/render-email-by-path";
 import path from "path";
+import * as Components from "@react-email/components";
 
 export const dynamic = "force-dynamic"; // defaults to auto
 // export const runtime = 'edge'; // 'nodejs' is the default
@@ -29,6 +30,7 @@ const getEmailTemplate = async (
     slug: string,
     props?: Record<string, unknown>
 ) => {
+    console.log(Components);
     const emailRenderingResult = await renderEmailByPath(
         path.join(process.cwd(), `/emails/${slug}.tsx`),
         props

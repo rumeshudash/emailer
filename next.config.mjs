@@ -6,9 +6,6 @@ const nextConfig = {
             {
                 esbuild: "esbuild",
             },
-            {
-                "@react-email/components": "@react-email/components",
-            },
         ];
         return config;
     },
