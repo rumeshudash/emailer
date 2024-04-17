@@ -28,7 +28,7 @@ const getEmailTemplate = async (
     props?: Record<string, unknown>
 ) => {
     const emailRenderingResult = await renderEmailByPath(
-        `emails/${slug}.tsx`,
+        `./emails/${slug}.tsx`,
         props
     );
 
