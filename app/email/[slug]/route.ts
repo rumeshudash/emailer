@@ -1,4 +1,4 @@
-import { renderEmailByPath } from "@/utils/render-email-by-path";
+import { renderEmailByPath } from "../../../utils/render-email-by-path";
 import path from "path";
 
 // export const dynamic = "force-dynamic"; // defaults to auto
