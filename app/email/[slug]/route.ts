@@ -1,4 +1,5 @@
 import { renderEmailByPath } from "@/utils/render-email-by-path";
+import path from "path";
 
 // export const dynamic = "force-dynamic"; // defaults to auto
 
@@ -28,7 +29,7 @@ const getEmailTemplate = async (
     props?: Record<string, unknown>
 ) => {
     const emailRenderingResult = await renderEmailByPath(
-        `./emails/${slug}.tsx`,
+        path.join(process.cwd(), `/emails/${slug}.tsx`),
         props
     );
 
