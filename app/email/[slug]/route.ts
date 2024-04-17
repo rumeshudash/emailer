@@ -1,7 +1,8 @@
 import { renderEmailByPath } from "../../../utils/render-email-by-path";
 import path from "path";
 
-// export const dynamic = "force-dynamic"; // defaults to auto
+export const dynamic = "force-dynamic"; // defaults to auto
+export const runtime = "edge"; // 'nodejs' is the default
 
 export const GET = async (
     _: Request,
