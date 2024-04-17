@@ -21,7 +21,7 @@ export const getEmailComponent = async (
         const buildData = await esbuild.build({
             bundle: true,
             entryPoints: [emailPath],
-            platform: "node",
+            // platform: "node",
             write: false,
             format: "cjs",
             jsx: "automatic",
@@ -42,6 +42,7 @@ export const getEmailComponent = async (
                 stack: buildFailure.stack,
                 name: buildFailure.name,
                 cause: buildFailure.cause,
+                data: buildData,
             },
         };
     }
