@@ -1,3 +1,4 @@
+import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
 import esbuild, { type BuildFailure, type OutputFile } from "esbuild";
 import path from "node:path";
 import vm from "node:vm";
@@ -21,7 +22,7 @@ export const getEmailComponent = async (
         const buildData = await esbuild.build({
             bundle: true,
             entryPoints: [emailPath],
-            // platform: "node",
+            platform: "node",
             write: false,
             format: "cjs",
             jsx: "automatic",
@@ -31,7 +32,8 @@ export const getEmailComponent = async (
                 ".js": "jsx",
             },
             outdir: "stdout", // just a stub for esbuild, it won't actually write to this folder
-            // sourcemap: "external",
+            sourcemap: "external",
+            plugins: [pnpPlugin()],
         });
         outputFiles = buildData.outputFiles;
     } catch (exception) {

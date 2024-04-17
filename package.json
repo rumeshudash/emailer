@@ -15,6 +15,7 @@
         "@react-email/components": "0.0.16",
         "@react-email/render": "^0.0.12",
         "@react-email/tailwind": "^0.0.15",
+        "@yarnpkg/esbuild-plugin-pnp": "^3.0.0-rc.15",
         "esbuild": "0.20.2",
         "next": "14.2.1",
         "react": "^18",
