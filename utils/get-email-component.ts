@@ -1,4 +1,3 @@
-import { pnpPlugin } from "@yarnpkg/esbuild-plugin-pnp";
 import esbuild, { type BuildFailure, type OutputFile } from "esbuild";
 import path from "node:path";
 import vm from "node:vm";
@@ -33,7 +32,6 @@ export const getEmailComponent = async (
             },
             outdir: "stdout", // just a stub for esbuild, it won't actually write to this folder
             sourcemap: "external",
-            plugins: [pnpPlugin()],
         });
         outputFiles = buildData.outputFiles;
     } catch (exception) {

@@ -7,10 +7,9 @@ const nextConfig = {
                 esbuild: "esbuild",
             },
         ];
-
         return config;
     },
-    transpilePackages: ["esbuild"],
+    // transpilePackages: ["esbuild"],
 };
 
 export default nextConfig;
