@@ -35,7 +35,7 @@ const getEmailTemplate = async (
 
     if ("error" in emailRenderingResult) {
         return new Response(
-            JSON.stringify({ error: emailRenderingResult.error.message }),
+            JSON.stringify({ error: emailRenderingResult.error }),
             { status: 404 }
         );
     }
