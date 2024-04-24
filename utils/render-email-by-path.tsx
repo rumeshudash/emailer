@@ -33,7 +33,7 @@ export const renderEmailByPath = async (
     const EmailComponent = Email as React.FC;
     try {
         const markup = await renderAsync(<EmailComponent {...previewProps} />, {
-            pretty: true,
+            // pretty: true,
         });
         const plainText = await renderAsync(
             <EmailComponent {...previewProps} />,
