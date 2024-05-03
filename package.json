@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && cp -r ./node_modules/@react-email ./.next/standalone/node_modules/@react-email",
         "start": "next start",
         "lint": "next lint",
         "dev:email": "email dev -p 3001",
