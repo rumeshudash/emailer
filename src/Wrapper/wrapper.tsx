@@ -4,7 +4,6 @@ import {
     Body,
     Container,
     Head,
-    Heading,
     Html,
     Img,
     Link,
@@ -33,21 +32,24 @@ const Wrapper = ({
                     <Container
                         className={cn('py-[20px] max-w-[600px]', className)}
                     >
-                        <Img
-                            src="https://bookslandnepal.com/booksland-header-logo.png"
-                            alt="Logo"
-                            className="w-[150px] mb-4"
-                        />
-                        <div className="bg-white rounded-lg overflow-hidden">
-                            {/* <Section className="p-4 border-b">
+                        <div>
+                            <Section width="auto" className="float-left">
                                 <Img
-                                    src="https://bookslandnepal.com/booksland-header-logo.png"
-                                    alt="Logo"
-                                    className="w-[150px] mx-auto"
+                                    src="https://bookslandnepal.com/logo.png"
+                                    alt="Books Land Nepal"
+                                    className="w-[50px] mb-4"
                                 />
-                            </Section> */}
+                            </Section>
+                            <Section width="auto" className="float-left">
+                                <Text className="my-0 font-bold">
+                                    Books Land
+                                </Text>
+                                <Text className="my-0 text-xs">Nepal</Text>
+                            </Section>
+                        </div>
+                        <div className="bg-white rounded-lg overflow-hidden w-full shadow-sm">
                             {children}
-                            <Section className="bg-brand text-white px-4 py-6">
+                            {/* <Section className="bg-brand text-white px-4 py-6">
                                 <Section
                                     className="float-left text-left"
                                     width="auto"
@@ -135,20 +137,58 @@ const Wrapper = ({
                                         </Link>
                                     </div>
                                 </Section>
-                            </Section>
+                            </Section> */}
                         </div>
-                        <Section className="p-4 pt-0 text-muted-text">
-                            <Text>
+                        <Section className="p-4 pt-0 text-muted-text text-center">
+                            <Text className="text-xs">
                                 If you have any questions, please contact us at{' '}
                                 <Link href="mailto:support@bookslandnepal.com">
                                     support@bookslandnepal.com
                                 </Link>{' '}
+                                <br />
                                 or call us at{' '}
                                 <Link href="tel:+9779802029090">
                                     +977 9802029090
                                 </Link>
                             </Text>
-                            <Text>
+                            <Text className="my-1">
+                                <Link
+                                    href="https://facebook.com/bookslandnepal"
+                                    className="inline-block text-muted-text mx-2"
+                                >
+                                    <Img
+                                        src="https://img.icons8.com/?size=100&id=LtK9OaHTp1cv&format=png&color=959595"
+                                        alt="Facebook"
+                                        className="w-[20px] inline-block"
+                                    />
+                                </Link>
+                                <Link
+                                    href="https://instagram.com/bookslandnepal"
+                                    className="inline-block text-muted-text mx-2"
+                                >
+                                    <Img
+                                        src="https://img.icons8.com/?size=100&id=32309&format=png&color=959595"
+                                        alt="Instagram"
+                                        className="w-[20px] inline-block"
+                                    />
+                                </Link>
+                            </Text>
+                            <Text className="text-xs my-1">
+                                <Link
+                                    href="https://bookslandnepal.com/policy"
+                                    className="text-muted-text"
+                                >
+                                    Privacy Policy
+                                </Link>
+                                <span className="mx-2">|</span>
+                                <Link
+                                    href="https://bookslandnepal.com/terms"
+                                    className="text-muted-text"
+                                >
+                                    Terms of Service
+                                </Link>
+                            </Text>
+                            <Text className="text-xs my-1">
                                 &copy; {new Date().getFullYear()} Books Land
                                 Nepal. All rights reserved.
                             </Text>
