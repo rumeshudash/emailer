@@ -1,23 +1,24 @@
-import { renderEmailByPath } from "../../../utils/render-email-by-path";
-import path from "path";
+import * as Emails from '../../../emails';
+import { renderEmailByPath } from '../../../utils/render-email-by-path';
 
-export const dynamic = "force-dynamic"; // defaults to auto
-// export const runtime = 'edge'; // 'nodejs' is the default
+export const dynamic = 'force-dynamic';
 
 export const GET = async (
     _: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> },
 ) => {
-    return getEmailTemplate(params.slug);
+    const slug = (await params).slug;
+    return getEmailTemplate(slug);
 };
 
 export const POST = async (
     request: Request,
-    { params }: { params: { slug: string } }
+    { params }: { params: Promise<{ slug: string }> },
 ) => {
     try {
         const body = await request.json();
-        return getEmailTemplate(params.slug, body);
+        const slug = (await params).slug;
+        return getEmailTemplate(slug, body);
     } catch (exception: any) {
         return new Response(JSON.stringify({ error: exception.message }), {
             status: 404,
@@ -27,17 +28,17 @@ export const POST = async (
 
 const getEmailTemplate = async (
     slug: string,
-    props?: Record<string, unknown>
+    props?: Record<string, unknown>,
 ) => {
-    const emailRenderingResult = await renderEmailByPath(
-        path.join(process.cwd(), `/emails/${slug}.tsx`),
-        props
-    );
+    const template = Emails[slug as keyof typeof Emails];
+    const emailRenderingResult = await renderEmailByPath(template, props);
 
-    if ("error" in emailRenderingResult) {
+    if ('error' in emailRenderingResult) {
         return new Response(
             JSON.stringify({ error: emailRenderingResult.error }),
-            { status: 404 }
+            {
+                status: 404,
+            },
         );
     }
 
@@ -45,6 +46,6 @@ const getEmailTemplate = async (
         JSON.stringify({
             html: emailRenderingResult.markup,
             plain_text: emailRenderingResult.plainText,
-        })
+        }),
     );
 };

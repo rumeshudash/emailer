@@ -1,23 +1,46 @@
-import { Button, Html } from "@react-email/components";
-import * as React from "react";
+import Wrapper from '@/src/Wrapper/wrapper';
+import { Button, Heading, Section, Text } from '@react-email/components';
 
-export default function Welcome({ link }: any) {
+export function Welcome({ name }: any) {
     return (
-        <Html>
-            <Button
-                href={link}
-                style={{
-                    background: "#000",
-                    color: "#fff",
-                    padding: "12px 20px",
-                }}
-            >
-                Click me
-            </Button>
-        </Html>
+        <Wrapper>
+            <Section className="p-4">
+                <Heading className="text-center">Welcome!</Heading>
+                <Text>Hello {name},</Text>
+                <Text>
+                    Welcome to Books Land Nepal! We're thrilled to have you join
+                    our community of book lovers.
+                </Text>
+                <Text>
+                    At Books Land Nepal, you'll discover a vast collection of
+                    books, from timeless classics to contemporary bestsellers,
+                    all at your fingertips. As a member, you'll enjoy:
+                </Text>
+                <Text className="ml-4">
+                    • Exclusive access to new arrivals • Special discounts and
+                    promotions • Personalized book recommendations • Seamless
+                    online shopping experience
+                </Text>
+                <Text className="mt-4">
+                    Start exploring our collection today!
+                </Text>
+                <Button
+                    className="mt-4 bg-blue-600 text-white px-6 py-3 rounded"
+                    href="https://bookslandnepal.com"
+                >
+                    Visit Books Land Nepal
+                </Button>
+                <Text className="mt-4">Happy reading!</Text>
+                <Text className="text-sm text-gray-600">
+                    The Books Land Nepal Team
+                </Text>
+            </Section>
+        </Wrapper>
     );
 }
 
 Welcome.PreviewProps = {
-    link: "https://example.com",
+    name: 'John Doe',
 };
+
+export default Welcome;

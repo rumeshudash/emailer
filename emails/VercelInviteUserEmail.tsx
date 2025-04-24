@@ -1,4 +1,4 @@
-import Wrapper from "@/src/Wrapper/wrapper";
+import Wrapper from '@/src/Wrapper/wrapper';
 import {
     Button,
     Column,
@@ -9,7 +9,7 @@ import {
     Row,
     Section,
     Text,
-} from "@react-email/components";
+} from '@react-email/components';
 
 interface VercelInviteUserEmailProps {
     username?: string;
@@ -25,7 +25,7 @@ interface VercelInviteUserEmailProps {
 
 const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : "https://demo.react.email";
+    : 'http://localhost:3333';
 
 export const VercelInviteUserEmail = ({
     username,
@@ -44,7 +44,7 @@ export const VercelInviteUserEmail = ({
         <Wrapper previewText={previewText}>
             <Section className="mt-[32px]">
                 <Img
-                    src={`${baseUrl}/static/vercel-logo.png`}
+                    src={`${baseUrl}/vercel.svg`}
                     width="40"
                     height="37"
                     alt="Vercel"
@@ -65,7 +65,7 @@ export const VercelInviteUserEmail = ({
                 >
                     {invitedByEmail}
                 </Link>
-                ) has invited you to the <strong>{teamName}</strong> team on{" "}
+                ) has invited you to the <strong>{teamName}</strong> team on{' '}
                 <strong>Vercel</strong>.
             </Text>
             <Section>
@@ -105,17 +105,17 @@ export const VercelInviteUserEmail = ({
                 </Button>
             </Section>
             <Text className="text-black text-[14px] leading-[24px]">
-                or copy and paste this URL into your browser:{" "}
+                or copy and paste this URL into your browser:{' '}
                 <Link href={inviteLink} className="text-blue-600 no-underline">
                     {inviteLink}
                 </Link>
             </Text>
             <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
             <Text className="text-[#666666] text-[12px] leading-[24px]">
-                This invitation was intended for{" "}
+                This invitation was intended for{' '}
                 <span className="text-black">{username}</span>. This invite was
-                sent from <span className="text-black">{inviteFromIp}</span>{" "}
-                located in{" "}
+                sent from <span className="text-black">{inviteFromIp}</span>{' '}
+                located in{' '}
                 <span className="text-black">{inviteFromLocation}</span>. If you
                 were not expecting this invitation, you can ignore this email.
                 If you are concerned about your account&apos;s safety, please
@@ -126,15 +126,15 @@ export const VercelInviteUserEmail = ({
 };
 
 VercelInviteUserEmail.PreviewProps = {
-    username: "alanturing",
-    userImage: `${baseUrl}/static/vercel-user.png`,
-    invitedByUsername: "Alan",
-    invitedByEmail: "alan.turing@example.com",
-    teamName: "Enigma",
-    teamImage: `${baseUrl}/static/vercel-team.png`,
-    inviteLink: "https://vercel.com/teams/invite/foo",
-    inviteFromIp: "204.13.186.218",
-    inviteFromLocation: "São Paulo, Brazil",
+    username: 'alanturing',
+    userImage: `${baseUrl}/vercel.svg`,
+    invitedByUsername: 'Alan',
+    invitedByEmail: 'alan.turing@example.com',
+    teamName: 'Enigma',
+    teamImage: `${baseUrl}/vercel.svg`,
+    inviteLink: 'https://vercel.com/teams/invite/foo',
+    inviteFromIp: '204.13.186.218',
+    inviteFromLocation: 'São Paulo, Brazil',
 } as VercelInviteUserEmailProps;
 
 export default VercelInviteUserEmail;

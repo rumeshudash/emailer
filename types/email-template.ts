@@ -1,8 +1,8 @@
 export interface EmailTemplate {
-  (props: Record<string, unknown> | Record<string, never>): React.ReactNode;
-  PreviewProps?: Record<string, unknown>;
+    (props: any): React.ReactNode;
+    PreviewProps?: any;
 }
 
 export const isEmailTemplate = (val: unknown): val is EmailTemplate => {
-  return typeof val === 'function';
+    return typeof val === 'function';
 };
