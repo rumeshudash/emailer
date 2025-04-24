@@ -37,7 +37,7 @@ export const VendorOrderReceived = ({ order }: VendorOrderReceivedProps) => {
                     details below.
                 </Text>
                 <Button
-                    href={`https://bookslandnepal.com/admin/orders/${order.id}`}
+                    href={`https://bookslandnepal.com/admin/orders/details/${order.id}`}
                     className="bg-brand text-white p-2 px-4 rounded-md"
                 >
                     View Order
