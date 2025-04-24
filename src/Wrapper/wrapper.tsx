@@ -31,7 +31,7 @@ const Wrapper = ({
             <Tailwind config={config}>
                 <Body className="bg-brand/5 my-auto mx-auto font-sans px-2">
                     <Container
-                        className={cn('my-[40px] max-w-[600px]', className)}
+                        className={cn('py-[20px] max-w-[600px]', className)}
                     >
                         <Img
                             src="https://bookslandnepal.com/booksland-header-logo.png"
