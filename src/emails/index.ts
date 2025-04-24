@@ -1,6 +1,6 @@
 export { CustomerOrderReceived } from './orders/CustomerOrderReceived';
-export * from './VercelInviteUserEmail';
-export * from './Welcome';
+export { VercelInviteUserEmail } from './VercelInviteUserEmail';
+export { Welcome } from './Welcome';
 
 export default function Test() {
     return 'Hello';

@@ -7,10 +7,10 @@
         "build": "next build",
         "start": "next start --port 3333",
         "lint": "next lint",
-        "dev:email": "email dev -p 3333",
-        "build:email": "email build --packageManager yarn",
-        "export:email": "email export",
-        "start:email": "email start"
+        "dev:email": "email dev -p 3333 -d ./src/emails",
+        "build:email": "email build --packageManager yarn --dir ./src/emails",
+        "export:email": "email export --dir ./src/emails",
+        "start:email": "email start --dir ./src/emails"
     },
     "dependencies": {
         "@react-email/components": "0.0.36",

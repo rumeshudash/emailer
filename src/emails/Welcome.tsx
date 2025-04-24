@@ -8,13 +8,14 @@ export function Welcome({ name }: any) {
                 <Heading className="text-center">Welcome!</Heading>
                 <Text>Hello {name},</Text>
                 <Text>
-                    Welcome to Books Land Nepal! We're thrilled to have you join
-                    our community of book lovers.
+                    Welcome to Books Land Nepal! We&apos;re thrilled to have you
+                    join our community of book lovers.
                 </Text>
                 <Text>
-                    At Books Land Nepal, you'll discover a vast collection of
-                    books, from timeless classics to contemporary bestsellers,
-                    all at your fingertips. As a member, you'll enjoy:
+                    At Books Land Nepal, you&apos;ll discover a vast collection
+                    of books, from timeless classics to contemporary
+                    bestsellers, all at your fingertips. As a member,
+                    you&apos;ll enjoy:
                 </Text>
                 <Text className="ml-4">
                     • Exclusive access to new arrivals • Special discounts and
@@ -25,7 +26,7 @@ export function Welcome({ name }: any) {
                     Start exploring our collection today!
                 </Text>
                 <Button
-                    className="mt-4 bg-blue-600 text-white px-6 py-3 rounded"
+                    className="mt-4 bg-brand text-white px-4 py-2 rounded"
                     href="https://bookslandnepal.com"
                 >
                     Visit Books Land Nepal

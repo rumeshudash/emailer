@@ -34,9 +34,9 @@ export const CustomerOrderReceived = ({
                 </Heading>
                 <Text>Hello, {order.customer_name}</Text>
                 <Text>
-                    Great news! Your order is all set to hit the road. We're
-                    packing it up with care and it'll be on its way to you in no
-                    time.
+                    Great news! Your order is all set to hit the road.
+                    We&apos;re packing it up with care and it&apos;ll be on its
+                    way to you in no time.
                 </Text>
                 <Button
                     href={`https://bookslandnepal.com/order/tracking/${order.tracking_id}`}

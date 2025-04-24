@@ -1,5 +1,5 @@
-import * as Emails from '../../../emails';
-import { renderEmailByPath } from '../../../utils/render-email-by-path';
+import * as Emails from '@/src/emails';
+import { renderEmailByPath } from '@/utils/render-email-by-path';
 
 export const dynamic = 'force-dynamic';
 
