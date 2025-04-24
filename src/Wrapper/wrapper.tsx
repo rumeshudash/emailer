@@ -139,7 +139,7 @@ const Wrapper = ({
                                 </Section>
                             </Section> */}
                         </div>
-                        <Section className="p-4 pt-0">
+                        <div className="p-4 pt-0">
                             <Text className="text-xs text-muted-text text-center">
                                 If you have any questions, please contact us at{' '}
                                 <Link href="mailto:support@bookslandnepal.com">
@@ -192,7 +192,7 @@ const Wrapper = ({
                                 &copy; {new Date().getFullYear()} Books Land
                                 Nepal. All rights reserved.
                             </Text>
-                        </Section>
+                        </div>
                     </Container>
                 </Body>
             </Tailwind>
