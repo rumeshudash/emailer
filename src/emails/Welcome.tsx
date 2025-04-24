@@ -3,7 +3,7 @@ import { Button, Heading, Section, Text } from '@react-email/components';
 
 export function Welcome({ name }: any) {
     return (
-        <Wrapper>
+        <Wrapper previewText="Welcome to Books Land Nepal!!!">
             <Section className="p-4">
                 <Heading className="text-center">Welcome!</Heading>
                 <Text>Hello {name},</Text>
