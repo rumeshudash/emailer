@@ -139,8 +139,8 @@ const Wrapper = ({
                                 </Section>
                             </Section> */}
                         </div>
-                        <Section className="p-4 pt-0 text-muted-text text-center">
-                            <Text className="text-xs">
+                        <Section className="p-4 pt-0">
+                            <Text className="text-xs text-muted-text text-center">
                                 If you have any questions, please contact us at{' '}
                                 <Link href="mailto:support@bookslandnepal.com">
                                     support@bookslandnepal.com
@@ -151,7 +151,7 @@ const Wrapper = ({
                                     +977 9802029090
                                 </Link>
                             </Text>
-                            <Text className="my-1">
+                            <Text className="my-1 text-muted-text text-center">
                                 <Link
                                     href="https://facebook.com/bookslandnepal"
                                     className="inline-block text-muted-text mx-2"
@@ -173,7 +173,7 @@ const Wrapper = ({
                                     />
                                 </Link>
                             </Text>
-                            <Text className="text-xs my-1">
+                            <Text className="text-xs my-1 text-muted-text text-center">
                                 <Link
                                     href="https://bookslandnepal.com/policy"
                                     className="text-muted-text"
@@ -188,7 +188,7 @@ const Wrapper = ({
                                     Terms of Service
                                 </Link>
                             </Text>
-                            <Text className="text-xs my-1">
+                            <Text className="text-xs my-1 text-muted-text text-center">
                                 &copy; {new Date().getFullYear()} Books Land
                                 Nepal. All rights reserved.
                             </Text>
