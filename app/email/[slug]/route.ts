@@ -15,15 +15,9 @@ export const POST = async (
     request: Request,
     { params }: { params: Promise<{ slug: string }> },
 ) => {
-    try {
-        const body = await request.json();
-        const slug = (await params).slug;
-        return getEmailTemplate(slug, body);
-    } catch (exception: any) {
-        return new Response(JSON.stringify({ error: exception.message }), {
-            status: 404,
-        });
-    }
+    const body = await request.json();
+    const slug = (await params).slug;
+    return getEmailTemplate(slug, body);
 };
 
 const getEmailTemplate = async (
