@@ -32,21 +32,17 @@ const Wrapper = ({
                     <Container
                         className={cn('py-[20px] max-w-[600px]', className)}
                     >
-                        <div>
-                            <Section width="auto" className="float-left">
-                                <Img
-                                    src="https://bookslandnepal.com/logo.png"
-                                    alt="Books Land Nepal"
-                                    className="w-[50px] mb-4"
-                                />
-                            </Section>
-                            <Section width="auto" className="float-left">
-                                <Text className="my-0 font-bold">
-                                    Books Land
-                                </Text>
-                                <Text className="my-0 text-xs">Nepal</Text>
-                            </Section>
-                        </div>
+                        <Section width="auto" className="float-left">
+                            <Img
+                                src="https://bookslandnepal.com/logo.png"
+                                alt="Books Land Nepal"
+                                className="w-[50px] mb-4"
+                            />
+                        </Section>
+                        <Section width="auto" className="float-left">
+                            <Text className="my-0 font-bold">Books Land</Text>
+                            <Text className="my-0 text-xs">Nepal</Text>
+                        </Section>
                         <div className="bg-white rounded-lg overflow-hidden w-full shadow-sm">
                             {children}
                             {/* <Section className="bg-brand text-white px-4 py-6">
