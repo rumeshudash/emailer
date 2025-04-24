@@ -5,7 +5,7 @@ const config = {
     theme: {
         extend: {
             colors: {
-                brand: 'hsl(27 94% 49%)',
+                brand: 'rgb(242 113 7)',
                 muted: colors.slate[200],
                 'muted-text': colors.slate[400],
                 ...colors,
@@ -15,7 +15,6 @@ const config = {
             },
         },
     },
-    plugins: [],
 };
 
 export default config;
