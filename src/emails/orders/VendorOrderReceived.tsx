@@ -12,13 +12,11 @@ import {
 } from '@react-email/components';
 import { format } from 'date-fns';
 
-interface CustomerOrderReceivedProps {
+interface VendorOrderReceivedProps {
     order: Order;
 }
 
-export const CustomerOrderReceived = ({
-    order,
-}: CustomerOrderReceivedProps) => {
+export const VendorOrderReceived = ({ order }: VendorOrderReceivedProps) => {
     const total = order.items.reduce(
         (sum, item) => sum + item.unit_price * item.quantity,
         0,
@@ -31,19 +29,18 @@ export const CustomerOrderReceived = ({
                     as="h2"
                     className="text-4xl text-center font-normal font-sans m-0 mb-2"
                 >
-                    Thanks for the Order
+                    New Order Received!
                 </Heading>
-                <Text>Hello {order.customer_name},</Text>
+                <Text>Hello Admin,</Text>
                 <Text>
-                    Great news! Your order is all set to hit the road.
-                    We&apos;re packing it up with care and it&apos;ll be on its
-                    way to you in no time.
+                    A new order has been received. Please check the order
+                    details below.
                 </Text>
                 <Button
-                    href={`https://bookslandnepal.com/order/tracking/${order.tracking_id}`}
+                    href={`https://bookslandnepal.com/admin/orders/${order.id}`}
                     className="bg-brand text-white p-2 px-4 rounded-md"
                 >
-                    Track your order
+                    View Order
                 </Button>
             </Section>
             <Row
@@ -64,9 +61,6 @@ export const CustomerOrderReceived = ({
                 </Column>
             </Row>
             <Section className="p-4 pb-0">
-                <Heading as="h4" className="mb-4 mt-0">
-                    Your items in this order
-                </Heading>
                 {order.items.map((item: OrderItem) => (
                     <Row key={item.id} className="mb-4">
                         <Column className="w-32">
@@ -155,7 +149,7 @@ export const CustomerOrderReceived = ({
     );
 };
 
-CustomerOrderReceived.PreviewProps = {
+VendorOrderReceived.PreviewProps = {
     order: {
         id: 11000,
         tracking_id: '1234567890',
@@ -212,6 +206,6 @@ CustomerOrderReceived.PreviewProps = {
         ],
         payment_method: PaymentMethod.CASH_ON_DELIVERY,
     },
-} as CustomerOrderReceivedProps;
+} as VendorOrderReceivedProps;
 
-export default CustomerOrderReceived;
+export default VendorOrderReceived;
