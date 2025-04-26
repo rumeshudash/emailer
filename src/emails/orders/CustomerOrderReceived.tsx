@@ -79,7 +79,8 @@ export const CustomerOrderReceived = ({
                                 <Img
                                     src={
                                         'https://api.bookslandnepal.com' +
-                                        item.product.image
+                                        item.product.image +
+                                        '?size=md'
                                     }
                                     alt={item.product.name}
                                     className="w-32"
