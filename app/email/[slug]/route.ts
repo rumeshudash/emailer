@@ -25,6 +25,16 @@ const getEmailTemplate = async (
     props?: Record<string, unknown>,
 ) => {
     const template = Emails[slug as keyof typeof Emails];
+
+    if (!template) {
+        return new Response(
+            JSON.stringify({ error: 'Email template not found' }),
+            {
+                status: 404,
+            },
+        );
+    }
+
     const emailRenderingResult = await renderEmailByPath(template, props);
 
     if ('error' in emailRenderingResult) {

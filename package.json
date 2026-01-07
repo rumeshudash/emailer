@@ -7,26 +7,24 @@
     "build": "next build",
     "start": "next start --port 3334",
     "lint": "next lint",
-    "dev:email": "email dev -p 3333 -d ./src/emails",
-    "build:email": "email build --packageManager yarn --dir ./src/emails",
-    "export:email": "email export --dir ./src/emails",
-    "start:email": "email start --dir ./src/emails"
+    "dev:email": "email dev -p 3333 -d ./src/emails"
   },
   "dependencies": {
-    "@react-email/components": "0.0.36",
-    "@react-email/render": "^1.0.6",
-    "@react-email/tailwind": "^1.0.4",
+    "@react-email/components": "1.0.4",
+    "@react-email/render": "^2.0.2",
+    "@react-email/tailwind": "^2.0.3",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "next": "15.2.8",
     "react": "^19",
     "react-dom": "^19",
-    "react-email": "4.0.6",
+    "react-email": "5.2.0",
     "react-icons": "^5.5.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@react-email/preview-server": "5.2.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
