@@ -43,7 +43,7 @@ const Wrapper = ({
                             <Text className="my-0 font-bold">Books Land</Text>
                             <Text className="my-0 text-xs">Nepal</Text>
                         </Section>
-                        <div className="bg-white rounded-lg overflow-hidden w-full shadow-sm">
+                        <Section className="bg-white rounded-lg overflow-hidden w-full shadow-sm">
                             {children}
                             {/* <Section className="bg-brand text-white px-4 py-6">
                                 <Section
@@ -134,8 +134,8 @@ const Wrapper = ({
                                     </div>
                                 </Section>
                             </Section> */}
-                        </div>
-                        <div className="p-4 pt-0">
+                        </Section>
+                        <Section className="p-4 pt-0">
                             <Text className="text-xs text-muted-text text-center">
                                 If you have any questions, please contact us at{' '}
                                 <Link href="mailto:support@bookslandnepal.com">
@@ -188,7 +188,7 @@ const Wrapper = ({
                                 &copy; {new Date().getFullYear()} Books Land
                                 Nepal. All rights reserved.
                             </Text>
-                        </div>
+                        </Section>
                     </Container>
                 </Body>
             </Tailwind>
