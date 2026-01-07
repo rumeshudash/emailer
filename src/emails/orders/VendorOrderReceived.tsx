@@ -74,7 +74,7 @@ export const VendorOrderReceived = ({ order }: VendorOrderReceivedProps) => {
                                     src={
                                         'https://api.bookslandnepal.com' +
                                         item.product.image +
-                                        '?size=md'
+                                        '?size=sm'
                                     }
                                     alt={item.product.name}
                                     className="w-32"
@@ -104,6 +104,7 @@ export const VendorOrderReceived = ({ order }: VendorOrderReceivedProps) => {
                 <Heading as="h4" className="mb-4">
                     Shipping Address
                 </Heading>
+                <Text className="my-1 font-bold">{order.customer_name}</Text>
                 <Text className="my-1">{order.address}</Text>
                 <Text className="my-1">
                     {order.city}, {order.district}
@@ -174,7 +175,7 @@ VendorOrderReceived.PreviewProps = {
                     id: 1000,
                     name: 'Product 1',
                     slug: 'product-1',
-                    image: 'https://api.bookslandnepal.com/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
+                    image: '/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
                     selling_price: 100,
                     price: 100,
                 },
@@ -187,7 +188,7 @@ VendorOrderReceived.PreviewProps = {
                     id: 1000,
                     name: 'Product 1',
                     slug: 'product-1',
-                    image: 'https://api.bookslandnepal.com/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
+                    image: '/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
                     selling_price: 100,
                     price: 100,
                 },
@@ -200,7 +201,7 @@ VendorOrderReceived.PreviewProps = {
                     id: 1000,
                     name: 'Product 1',
                     slug: 'product-1',
-                    image: 'https://api.bookslandnepal.com/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
+                    image: '/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
                     selling_price: 100,
                     price: 100,
                 },

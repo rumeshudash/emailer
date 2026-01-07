@@ -80,7 +80,7 @@ export const CustomerOrderReceived = ({
                                     src={
                                         'https://api.bookslandnepal.com' +
                                         item.product.image +
-                                        '?size=md'
+                                        '?size=sm'
                                     }
                                     alt={item.product.name}
                                     className="w-32"
@@ -180,7 +180,7 @@ CustomerOrderReceived.PreviewProps = {
                     id: 1000,
                     name: 'Product 1',
                     slug: 'product-1',
-                    image: 'https://api.bookslandnepal.com/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
+                    image: '/images/The%20Alchemist%20%20Paulo%20Coelho-1744375601260-1745659313356.jpeg',
                     selling_price: 100,
                     price: 100,
                 },
@@ -193,7 +193,7 @@ CustomerOrderReceived.PreviewProps = {
                     id: 1000,
                     name: 'Product 1',
                     slug: 'product-1',
-                    image: 'https://api.bookslandnepal.com/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
+                    image: '/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
                     selling_price: 100,
                     price: 100,
                 },
@@ -206,7 +206,7 @@ CustomerOrderReceived.PreviewProps = {
                     id: 1000,
                     name: 'Product 1',
                     slug: 'product-1',
-                    image: 'https://api.bookslandnepal.com/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
+                    image: '/images/surrounded-by-idiots-p7sb7rj9-1743534502407-1744121531476.jpg',
                     selling_price: 100,
                     price: 100,
                 },

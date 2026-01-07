@@ -38,6 +38,8 @@ export interface Product {
     image?: string;
     publisher?: string;
     isbn?: string;
+    stock_quantity?: number;
+    low_stock_threshold?: number;
     metadata?: Record<string, any>;
     authors?: Author[];
     categories?: Category[];
