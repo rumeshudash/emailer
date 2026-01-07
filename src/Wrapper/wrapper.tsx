@@ -43,7 +43,7 @@ const Wrapper = ({
                             <Text className="my-0 font-bold">Books Land</Text>
                             <Text className="my-0 text-xs">Nepal</Text>
                         </Section>
-                        <Section className="bg-white rounded-lg overflow-hidden w-full shadow-sm">
+                        <Section className="bg-white rounded-lg overflow-hidden w-full">
                             {children}
                             {/* <Section className="bg-brand text-white px-4 py-6">
                                 <Section
