@@ -1,5 +1,5 @@
 import { EmailTemplate } from '@/types/email-template';
-import { render } from '@react-email/render';
+import { render, toPlainText } from '@react-email/render';
 import { deepMerge } from './deep-merge';
 
 export interface RenderedEmailMetadata {
@@ -27,9 +27,7 @@ export const renderEmailByPath = async (
         const markup = await render(<EmailComponent {...previewProps} />, {
             pretty,
         });
-        const plainText = await render(<EmailComponent {...previewProps} />, {
-            plainText: true,
-        });
+        const plainText = toPlainText(markup);
 
         return {
             markup,
